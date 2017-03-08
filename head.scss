@@ -1,3 +1,36 @@
+$color: #673AB7;
+$color-meta: #9C27B0;
+$color-link: #E91E63;
+$color-style: #FF5722;
+$color-script: #ff9800;
+
+html{
+  border: 10px solid $color;
+  padding: 10px;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin tag($c: $color){
+  
+  background: $c;
+  color: #FFF;
+  //padding: 3px 25px 3px 6px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  margin: 2px 10px;
+  
+}
+
 head,
 title,
 link,
@@ -7,43 +40,46 @@ style,
 script{
   display: block;
   font: 14px/1.5 Consolas,monaco,monospace;
-  padding: 3px 25px 3px 6px;
-  background: #000;
-  margin: 2px 10px;
-  color: #FFF;
-  border-radius: 3px;
+  z-index: 999999;
+  //@include clearfix();
+  @include tag();
 }
 
 head{
-  border-top: 1px solid;
-  border-bottom: 1px solid;
   position: relative;
-  margin: 1em 0;
-  padding: 1em;
+  padding: 32px 0;
+  margin: 0;
   background: transparent;
-  color: #000;
+  color: $color;
+
+  
+  &:before,
+  &:after{
+    display: block;
+    content: '<head>';
+    position: absolute;
+    @include tag();
+  }
+
+  &:before{
+    content: '<head>';
+    top:0; left: 0;
+  }
+
+  &:after{
+    content: '</head>';
+    bottom: 0;
+    left: 0;
+  }  
+  
 }
 
-head:before,
-head:after{
-  display: block;
-  content: '<head>';
-  position: absolute;
-  background: #FFF;
-  top:-1.1em; left: 0;
-  padding: .25em .5em;
-}
-
-head:after{
-  content: '</head>';
-  position: absolute;
-  bottom: -1em;
-  top: auto;
-}
 
 
 meta{
-  
+
+  background-color: $color-meta;
+    
   &::after{
     content: '<meta ... />';  
   }
@@ -68,51 +104,68 @@ title {
 }
 
 
-link[rel]{
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-link[rel]:not([src]):before {
-  content: '<link>';
-}
-link[rel][href]:before {
-  content: '<link rel="' attr(rel) '" href="' attr(href) '">';
-}
-link:after{
-  content: '</link>';
+link{
+  
+  background-color: $color-link;
+  
+  &[rel]{
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &[rel]:not([src]):before {
+    content: '<link>';
+  }
+  &[rel][href]:before {
+    content: '<link rel="' attr(rel) '" href="' attr(href) '">';
+  }
+  &:after{
+    content: '</link>';
+  }
+
 }
 
 script{
+  
+  background-color: $color-script;
+  
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-script:not([src]):before {
-  content: '<script>';
-}
-script[src]:before {
-  content: '<script src="' attr(src) '">';
-}
-script:after {
-  content: '</script>';
+  
+  &:not([src]):before {
+    content: '<script>';
+  }
+  &[src]:before {
+    content: '<script src="' attr(src) '">';
+  }
+  &:after {
+    content: '</script>';
+  }
+  
 }
 
 
 style{
+  
+  background-color: $color-style;
+  
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-style:not([src]):before {
-  content: '<st''yle>';
-}
-style[src]:before {
-  content: '<style src="' attr(src) '">';
-}
-style:after {
-  content: '</style>';
+  
+  &:not([src]):before {
+    content: '<st''yle>';
+  }
+  &[src]:before {
+    content: '<style src="' attr(src) '">';
+  }
+
+  &:after {
+    content: '</st''yle>';
+  }
+  
 }
