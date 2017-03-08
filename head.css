@@ -3,6 +3,10 @@ html {
   padding: 10px;
 }
 
+[name="css-head-inspector"] {
+  display: none !important;
+}
+
 head,
 title,
 link,
@@ -10,42 +14,64 @@ title,
 meta,
 style,
 script {
+  z-index: 99999999;
   display: block;
   font: 14px/1.5 Consolas,monaco,monospace;
-  z-index: 999999;
   background: #673AB7;
   color: #FFF;
   padding: 3px 6px;
   border-radius: 3px;
-  margin: 2px 10px;
+  margin: 2px;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-head {
+head,
+body {
   position: relative;
-  padding: 32px 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
   margin: 0;
   background: transparent;
-  color: #673AB7;
 }
-head:before, head:after {
-  display: block;
-  content: '<head>';
+head:before, head:after,
+body:before,
+body:after {
+  content: '';
   position: absolute;
+  display: block;
+  font: 14px/1.5 Consolas,monaco,monospace;
   background: #673AB7;
   color: #FFF;
   padding: 3px 6px;
   border-radius: 3px;
-  margin: 2px 10px;
+  margin: 2px;
 }
-head:before {
-  content: '<head>';
+head:before,
+body:before {
   top: 0;
   left: 0;
 }
-head:after {
-  content: '</head>';
+head:after,
+body:after {
   bottom: 0;
   left: 0;
+}
+
+head:before {
+  content: "<head>";
+}
+head:after {
+  content: "</head>";
+}
+
+body:before {
+  content: "<body>";
+}
+body:after {
+  content: "</body>";
 }
 
 meta {
@@ -63,6 +89,9 @@ meta[http-equiv][content]::after {
 meta[name][content]::after {
   content: '<meta name="' attr(name) '" content="' attr(content) '">';
 }
+meta[name][value]::after {
+  content: '<meta name="' attr(name) '" value="' attr(value) '">';
+}
 meta[property][content]::after {
   content: '<meta property="' attr(property) '" content="' attr(content) '">';
 }
@@ -75,28 +104,18 @@ title {
 link {
   background-color: #E91E63;
 }
-link[rel] {
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 link[rel]:not([src]):before {
   content: '<link>';
 }
 link[rel][href]:before {
-  content: '<link rel="' attr(rel) '" href="' attr(href) '">';
+  content: '<link rel="' attr(rel) '" href="' attr(href) '"';
 }
 link:after {
-  content: '</link>';
+  content: ' />';
 }
 
 script {
   background-color: #ff9800;
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 script:not([src]):before {
   content: '<script>';
@@ -110,10 +129,6 @@ script:after {
 
 style {
   background-color: #FF5722;
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 style:not([src]):before {
   content: "<st" "yle>";
