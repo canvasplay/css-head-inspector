@@ -57,6 +57,9 @@ meta::after {
 meta[charset]::after {
   content: '<meta charset="' attr(charset) '">';
 }
+meta[http-equiv][content]::after {
+  content: '<meta http-equiv="' attr(http-equiv) '" content="' attr(content) '">';
+}
 meta[name][content]::after {
   content: '<meta name="' attr(name) '" content="' attr(content) '">';
 }
