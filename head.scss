@@ -88,6 +88,10 @@ meta{
     content: '<meta charset="' attr(charset) '">';
   }
   
+  &[http-equiv][content]::after{
+    content: '<meta http-equiv="' attr(http-equiv) '" content="' attr(content) '">';
+  }
+  
   &[name][content]::after{
     content: '<meta name="' attr(name) '" content="' attr(content) '">';
   }
