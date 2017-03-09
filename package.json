@@ -1,0 +1,17 @@
+{
+  "name": "head-css-inspector",
+  "version": "0.2.7",
+  "description": "Plugin CSS styles for visually inspect hidden head elements",
+  "author": "canvasplay",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canvasplay/head-css-inspector.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-jst": "^1.0.0",
+    "grunt-sass": "^1.2.1"
+  }
+}
