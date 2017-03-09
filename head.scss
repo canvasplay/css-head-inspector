@@ -29,6 +29,8 @@ $color-script: #ff9800;
 html{
   border: 10px solid $color-base;
   padding: 10px;
+  height: auto;
+  min-height: 100%;
 }
 
 //hide any element named "css-head-inspector" 
@@ -39,7 +41,6 @@ styles[name="css-head-inspector"]{
 }
 
 
-head,
 title,
 link,
 title,
@@ -58,6 +59,7 @@ html,
 head,
 body{
   
+  display: block;
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;

@@ -1,6 +1,8 @@
 html {
   border: 10px solid #673AB7;
   padding: 10px;
+  height: auto;
+  min-height: 100%;
 }
 
 link[name="css-head-inspector"],
@@ -8,7 +10,6 @@ styles[name="css-head-inspector"] {
   display: none !important;
 }
 
-head,
 title,
 link,
 title,
@@ -32,6 +33,7 @@ script {
 html,
 head,
 body {
+  display: block;
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
