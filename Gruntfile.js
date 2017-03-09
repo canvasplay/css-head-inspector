@@ -5,9 +5,22 @@ module.exports = function(grunt) {
 
         pkg: grunt.file.readJSON('package.json'),
 
+        'regex-replace':{
+          'version':{
+            src: 'head.scss',
+            actions: [
+              {
+                name: 'version',
+                search: /\$version:\s*\S*;/g,
+                replace: "$version: '<%= pkg.version %>';"
+              }
+            ]
+          }
+        },
+
         sass: {
           options: {
-            outputStyle: 'compressed',
+            outputStyle: 'expanded',
             sourceMap: false
           },
           dist: {
@@ -21,18 +34,7 @@ module.exports = function(grunt) {
           }
         },
 
-        'regex-replace':{
-          'version':{
-            src: 'head.css',
-            actions: [
-              {
-                name: 'version',
-                search: '@version',
-                replace: '@<%= pkg.version %>'
-              }
-            ]
-          }
-        },
+
 
         bump: {
           options: {
@@ -45,12 +47,14 @@ module.exports = function(grunt) {
         
     });
     
+    //grunt.loadTasks('tasks');
+
     grunt.loadNpmTasks('grunt-regex-replace');
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-sass');
     
-    grunt.registerTask('version', ['bump']);
-    grunt.registerTask('styles', ['sass', 'regex-replace']);
+    grunt.registerTask('version', ['bump', 'regex-replace']);
+    grunt.registerTask('styles', ['sass']);
     grunt.registerTask('default', ['styles']);
     
     

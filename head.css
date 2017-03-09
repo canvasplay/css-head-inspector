@@ -1,1 +1,175 @@
-html{border:10px solid #673AB7;padding:10px}link[name="css-head-inspector"],styles[name="css-head-inspector"]{display:none !important}head,title,link,title,meta,style,script{z-index:99999999;display:block;font:14px/1.5 Consolas,monaco,monospace;background:#673AB7;color:#FFF;padding:3px 6px;border-radius:3px;margin:2px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}html,head,body{position:relative;padding-top:32px;padding-bottom:32px;margin:0;background:transparent}html:before,html:after,head:before,head:after,body:before,body:after{content:'';position:absolute;display:block;font:14px/1.5 Consolas,monaco,monospace;background:#673AB7;color:#FFF;padding:3px 6px;border-radius:3px;margin:2px}html:before,head:before,body:before{top:0;left:0}html:after,head:after,body:after{bottom:0;left:0}html:before{content:'<html ! css-head-inspector@0.2.9 >'}html:after{content:'</html>'}head:before{content:'<head>'}head:after{content:'</head>'}body:before{content:'<body>'}body:after{content:'</body>'}meta{background-color:#9C27B0}meta::after{content:'<meta ... />'}meta[charset]::after{content:'<meta charset="' attr(charset) '">'}meta[http-equiv][content]::after{content:'<meta http-equiv="' attr(http-equiv) '" content="' attr(content) '">'}meta[name][content]::after{content:'<meta name="' attr(name) '" content="' attr(content) '">'}meta[name][value]::after{content:'<meta name="' attr(name) '" value="' attr(value) '">'}meta[property][content]::after{content:'<meta property="' attr(property) '" content="' attr(content) '">'}title{font-size:26px;font-weight:bold}link{background-color:#E91E63}link[rel]:not([src]):before{content:'<link>'}link[rel][href]:before{content:'<link rel="' attr(rel) '" href="' attr(href) '"'}link:after{content:' />'}script{background-color:#ff9800}script:not([src]):before{content:'<script>'}script[src]:before{content:'<script src="' attr(src) '">'}script:after{content:'</script>'}style{background-color:#FF5722}style:not([src]):before{content:"<st" "yle>"}style[src]:before{content:'<style src="' attr(src) '">'}style:after{content:"</st" "yle>"}
+html {
+  border: 10px solid #673AB7;
+  padding: 10px;
+}
+
+link[name="css-head-inspector"],
+styles[name="css-head-inspector"] {
+  display: none !important;
+}
+
+head,
+title,
+link,
+title,
+meta,
+style,
+script {
+  z-index: 99999999;
+  display: block;
+  font: 14px/1.5 Consolas, monaco, monospace;
+  background: #673AB7;
+  color: #FFF;
+  padding: 3px 6px;
+  border-radius: 3px;
+  margin: 2px;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html,
+head,
+body {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin: 0;
+  background: transparent;
+}
+
+html:before, html:after,
+head:before,
+head:after,
+body:before,
+body:after {
+  content: '';
+  position: absolute;
+  display: block;
+  font: 14px/1.5 Consolas, monaco, monospace;
+  background: #673AB7;
+  color: #FFF;
+  padding: 3px 6px;
+  border-radius: 3px;
+  margin: 2px;
+}
+
+html:before,
+head:before,
+body:before {
+  top: 0;
+  left: 0;
+}
+
+html:after,
+head:after,
+body:after {
+  bottom: 0;
+  left: 0;
+}
+
+html:before {
+  content: "<html ! css-head-inspector@0.2.11 >";
+}
+
+html:after {
+  content: '</html>';
+}
+
+head:before {
+  content: '<head>';
+}
+
+head:after {
+  content: '</head>';
+}
+
+body:before {
+  content: '<body>';
+}
+
+body:after {
+  content: '</body>';
+}
+
+meta {
+  background-color: #9C27B0;
+}
+
+meta::after {
+  content: '<meta ... />';
+}
+
+meta[charset]::after {
+  content: '<meta charset="' attr(charset) '">';
+}
+
+meta[http-equiv][content]::after {
+  content: '<meta http-equiv="' attr(http-equiv) '" content="' attr(content) '">';
+}
+
+meta[name][content]::after {
+  content: '<meta name="' attr(name) '" content="' attr(content) '">';
+}
+
+meta[name][value]::after {
+  content: '<meta name="' attr(name) '" value="' attr(value) '">';
+}
+
+meta[property][content]::after {
+  content: '<meta property="' attr(property) '" content="' attr(content) '">';
+}
+
+title {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+link {
+  background-color: #E91E63;
+}
+
+link[rel]:not([src]):before {
+  content: '<link>';
+}
+
+link[rel][href]:before {
+  content: '<link rel="' attr(rel) '" href="' attr(href) '"';
+}
+
+link:after {
+  content: ' />';
+}
+
+script {
+  background-color: #ff9800;
+}
+
+script:not([src]):before {
+  content: '<script>';
+}
+
+script[src]:before {
+  content: '<script src="' attr(src) '">';
+}
+
+script:after {
+  content: '</script>';
+}
+
+style {
+  background-color: #FF5722;
+}
+
+style:not([src]):before {
+  content: "<st" "yle>";
+}
+
+style[src]:before {
+  content: '<style src="' attr(src) '">';
+}
+
+style:after {
+  content: "</st" "yle>";
+}
