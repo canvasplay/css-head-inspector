@@ -28,7 +28,7 @@ module.exports = function(grunt) {
               {
                 name: 'version',
                 search: '@version',
-                replace: '<%= pkg.version %>'
+                replace: '@<%= pkg.version %>'
               }
             ]
           }
