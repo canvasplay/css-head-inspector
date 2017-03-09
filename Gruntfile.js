@@ -2,11 +2,13 @@ module.exports = function(grunt) {
 
 
     grunt.initConfig({
-      
+
+        pkg: grunt.file.readJSON('package.json'),
+
         sass: {
           options: {
-            style: 'expanded',
-            sourceMap: true
+            outputStyle: 'compressed',
+            sourceMap: false
           },
           dist: {
             files: [{
@@ -16,6 +18,19 @@ module.exports = function(grunt) {
                 dest: './',
                 ext: '.css'
             }]
+          }
+        },
+
+        'regex-replace':{
+          'version':{
+            src: 'head.css',
+            actions: [
+              {
+                name: 'version',
+                search: '@version',
+                replace: '<%= pkg.version %>'
+              }
+            ]
           }
         },
 
@@ -30,13 +45,14 @@ module.exports = function(grunt) {
         
     });
     
+    grunt.loadNpmTasks('grunt-regex-replace');
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-postcss');
     
-    grunt.registerTask('default', ['styles', 'watch']);
-    grunt.registerTask('styles', ['sass']);
+    grunt.registerTask('version', ['bump']);
+    grunt.registerTask('styles', ['sass', 'regex-replace']);
+    grunt.registerTask('default', ['styles']);
+    
     
 
 };
