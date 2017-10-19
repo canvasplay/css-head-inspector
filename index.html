@@ -1,17 +1,33 @@
 <html>
 
   <head>
+    <!-- FORCING RENDERING ENGINE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- CHARSET ENCODING -->
+    <meta charset="utf-8">
+
+    <!-- INLINE BASE64 DEFAULT FAVICON ( prevents annoying http requests for none existing favicon.ico ) -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+    <meta property="someProperty" content="someContent">
+    <meta name="someName" value="someValue">
+    <meta name="someName" content="super long meta content value that should be enough to test what happens if it overflows the page boundaires.">
+
     <title>CSS HEAD INSPECTOR</title>
   </head>
 
   <body>
     <h1>CSS HEAD INSPECTOR</h1>
-    <h2>Plugin CSS styles for visually inspect hidden head elements</h2>
+    <h2>Pluggable CSS styles to visually inspect hidden html head elements.</h2>
+    <p class="license"></p>
 
     <p>
       Bookmark this link to use it!
       <a href="javascript:(function(){var s=document.querySelector('link[name=css-head-inspector]'); if(s) document.body.removeChild(s); if(s) return; s=document.createElement('link'); s.setAttribute('name','css-head-inspector'); s.setAttribute('rel','stylesheet'); s.setAttribute('href','https://canvasplay.github.io/css-head-inspector/head.css'); document.body.appendChild(s);
-         })();">CSS HEAD INSPECTOR</a>
+         })();" title="hola">CSS HEAD INSPECTOR</a>
     </p>
 
 
