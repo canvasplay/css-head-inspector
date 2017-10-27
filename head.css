@@ -76,7 +76,7 @@ body:after {
 }
 
 html:before {
-  content: "<html ! css-head-inspector@0.2.12 >";
+  content: "<html ! css-head-inspector@0.2.14 >";
 }
 
 html:after {
