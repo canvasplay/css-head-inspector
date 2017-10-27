@@ -23,7 +23,7 @@ $color-script: #ff9800;
     white-space: nowrap;
     max-width: 100%;
     overflow: hidden;
-    text-overflow: ellipsis;  
+    text-overflow: ellipsis;
 }
 
 html{
@@ -33,7 +33,7 @@ html{
   min-height: 100%;
 }
 
-//hide any element named "css-head-inspector" 
+//hide any element named "css-head-inspector"
 //using the bookmarlet styles will be injected using this name
 link[name="css-head-inspector"],
 styles[name="css-head-inspector"]{
@@ -71,26 +71,27 @@ body{
     content: '';
     position: absolute;
     @include base();
+    @include singleline();
   }
 
   &:before{ top:0; left: 0 }
-  &:after{ bottom: 0; left: 0 }  
+  &:after{ bottom: 0; left: 0 }
   
 }
 
 html{
-  &:before{ content: '<html ! css-head-inspector@#{$version} >' }
-  &:after{ content: '</html>' }  
+  &:before{ content: '<html ! css-head-inspector@#{$version} >';  }
+  &:after{ content: '</html>' }
 }
 
 head{
   &:before{ content: '<head>' }
-  &:after{ content: '</head>' }  
+  &:after{ content: '</head>' }
 }
 
 body{
   &:before{ content: '<body>' }
-  &:after{ content: '</body>' }  
+  &:after{ content: '</body>' }
 }
 
 meta{
@@ -98,7 +99,7 @@ meta{
   background-color: $color-meta;
     
   &::after{
-    content: '<meta ... />';  
+    content: '<meta ... />';
   }
   
   &[charset]::after{
