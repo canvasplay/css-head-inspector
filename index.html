@@ -39,18 +39,16 @@
 
       header,
       article{
-        text-align: center;
+        /*text-align: center;*/
         padding: 3em
       }
 
       header{
         max-width: 40em;
-        margin: 0 auto;
         padding-bottom: 0;
       }
 
       article{
-        text-align: center;
         padding-top: 0;
       }
 
@@ -98,7 +96,7 @@
       
     <script type="text/javascript">/* this is an inline script */</script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <meta property="someProperty" content="someContent">
     <meta name="someName" value="someValue">
@@ -111,28 +109,50 @@
     <header>
       <h1>CSS HEAD INSPECTOR</h1>
       <h2>Pluggable CSS styles to visually inspect hidden html head elements.</h2>
-      <p class="license"><a href="https://github.com/canvasplay/css-head-inspector">CANVASPLAY</a> @ MIT LICENSE v0.2.11</p>
+      <!--<p class="license"><a href="https://github.com/canvasplay/css-head-inspector">CANVASPLAY</a> @ MIT LICENSE v0.2.14</p>-->
+      <p class="license">MIT LICENSE v0.2.14</p>
     </header>
 
     <article>
+      
       <p class="buttons">
         <a class="button" href="javascript:(function(){var s=document.querySelector('link[name=css-head-inspector]'); if(s) document.body.removeChild(s); if(s) return; s=document.createElement('link'); s.setAttribute('name','css-head-inspector'); s.setAttribute('rel','stylesheet'); s.setAttribute('href','https://canvasplay.github.io/css-head-inspector/head.css'); document.body.appendChild(s);
            })();" title="CSS HEAD INSPECTOR">CSS HEAD INSPECTOR</a>
       </p>
+      
       <p>
         Click the button above to toggle the inspector styles.
       </p>
+      
+      <h3>What is this?</h3>
+      <p>
+        This is an small set of css rules revealing hidden html elements mostly inside head. Applying this styles to any existing website you can show most of html's head contents such as <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> or <code>&lt;style&gt;</code>
+      </p>
+      <p>
+        Revealed elements are bright colored in order to stand out in most of website designs.
+      </p>
+      
       <h3>Bookmarklet</h3>
+      
       <p>
         You can easily use the inspector on every site using a bookmarklet link.
-      </p>      
+      </p>
+      
       <p>
         The bookmarlet comes in two flavors, one injects the stylesheet using a <code>&lt;link&gt;</code> and the other using <code>&lt;style&gt;</code> inlining all the css code, the <code>&lt;style&gt;</code> version is useful to prevent CSP crossdomain errors.
       </p>
-      <h3>About</h3>
+      
+      <h3>Motivation</h3>
+      
       <p>
-        This project is just a tiny toy but it can become useful for some quick checks about what is on the head of a page. It does not pretend to be as useful as a full featured dev tools, use at your own.
-      </p>      
+        This project is just a tiny toy, it started as an experiment in codepen. I decided to create this bookmarlet so maybe someone might find it useful for some quick checks about what is on the head of a website.
+        But... we already have dev tools... Yep! It does not pretend to be as useful as a full featured dev tools, it is what it is and you can use it as you like :)
+      </p>
+      
+      <h3>Downloads</h3>
+      <a href="https://github.com/canvasplay/css-head-inspector/zipball/master">ZIP</a>
+      <a href="https://github.com/canvasplay/css-head-inspector/tarball/master">TAR</a>
+      <a href="https://github.com/canvasplay/css-head-inspector" target="_blank">GITHUB</a>
 
     </article>
 
