@@ -1,4 +1,4 @@
-$version: 'v0.2.15';
+$version: 'v0.2.16';
 $font: 14px/1.5 Consolas,monaco,monospace;
 $color-base: #673AB7;
 $color-meta: #9C27B0;
@@ -11,8 +11,8 @@ $size: 3.2em;
 
   display: block;
   font: $font;
-  
   background: $color-base;
+  user-select: none;
   color: #FFF;
   padding: 3px 6px;
   border-radius: 3px;

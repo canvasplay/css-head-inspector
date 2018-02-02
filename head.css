@@ -20,6 +20,7 @@ script {
   display: block;
   font: 14px/1.5 Consolas, monaco, monospace;
   background: #673AB7;
+  user-select: none;
   color: #FFF;
   padding: 3px 6px;
   border-radius: 3px;
@@ -60,6 +61,7 @@ body:after {
   display: block;
   font: 14px/1.5 Consolas, monaco, monospace;
   background: #673AB7;
+  user-select: none;
   color: #FFF;
   padding: 3px 6px;
   border-radius: 3px;
@@ -85,7 +87,7 @@ body:after {
 }
 
 html:before {
-  content: "<html ! css-head-inspector@v0.2.15 >";
+  content: "<html ! css-head-inspectorv0.2.16>";
 }
 
 html:after {
