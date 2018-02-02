@@ -30,6 +30,15 @@ script {
   text-overflow: ellipsis;
 }
 
+title:active,
+link:active,
+title:active,
+meta:active,
+style:active,
+script:active {
+  white-space: normal;
+}
+
 html,
 head,
 body {
@@ -76,7 +85,7 @@ body:after {
 }
 
 html:before {
-  content: "<html ! css-head-inspector@0.2.14 >";
+  content: "<html ! css-head-inspector@0.2.15 >";
 }
 
 html:after {

@@ -38,7 +38,8 @@ module.exports = function(grunt) {
 
         bump: {
           options: {
-            files: ['package.json'],
+            files: ['head.scss','package.json'],
+            regEx: /version: '([0-9\.]*)'/g,
             commit: false,
             createTag: false,
             push: false
