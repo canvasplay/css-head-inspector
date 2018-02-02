@@ -51,5 +51,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('version', ['bump', 'regex-replace']);
 	grunt.registerTask('styles', ['sass']);
 	grunt.registerTask('default', ['styles']);
+	grunt.registerTask('regex', ['regex-replace']);
 
 };
