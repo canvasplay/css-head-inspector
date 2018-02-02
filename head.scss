@@ -1,10 +1,11 @@
-$version: '0.2.15';
+$version: 'v0.2.15';
 $font: 14px/1.5 Consolas,monaco,monospace;
 $color-base: #673AB7;
 $color-meta: #9C27B0;
 $color-link: #E91E63;
 $color-style: #FF5722;
 $color-script: #ff9800;
+$size: 3.2em;
 
 @mixin base(){
 
@@ -86,7 +87,7 @@ body{
 }
 
 html{
-  &:before{ content: '<html ! css-head-inspector@#{$version} >';  }
+  &:before{ content: '<html ! css-head-inspector#{$version}>';  }
   &:after{ content: '</html>' }
 }
 

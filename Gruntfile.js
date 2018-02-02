@@ -1,63 +1,55 @@
 module.exports = function(grunt) {
 
 
-    grunt.initConfig({
+	grunt.initConfig({
 
-        pkg: grunt.file.readJSON('package.json'),
+		'regex-replace': {
+			'foo': {
+				src: ['index.html', 'head.scss'],
+				actions: [{
+					name: 'version',
+					search: /v(\d+\.\d+\.\d+)/gm,
+					replace: "v<%= grunt.file.readJSON('package.json').version %>"
+				}]
+			}
 
-        'regex-replace':{
-          'version':{
-            src: 'head.scss',
-            actions: [
-              {
-                name: 'version',
-                search: /\$version:\s*\S*;/g,
-                replace: "$version: '<%= pkg.version %>';"
-              }
-            ]
-          }
-        },
+		},
 
-        sass: {
-          options: {
-            outputStyle: 'expanded',
-            sourceMap: false
-          },
-          dist: {
-            files: [{
-                expand: true,
-                cwd: './',
-                src: 'head.scss',
-                dest: './',
-                ext: '.css'
-            }]
-          }
-        },
+		sass: {
+			options: {
+				outputStyle: 'expanded',
+				sourceMap: false
+			},
+			dist: {
+				files: [{
+					expand: true,
+					cwd: './',
+					src: 'head.scss',
+					dest: './',
+					ext: '.css'
+				}]
+			}
+		},
 
 
 
-        bump: {
-          options: {
-            files: ['head.scss','package.json'],
-            regEx: /version: '([0-9\.]*)'/g,
-            commit: false,
-            createTag: false,
-            push: false
-          }
-        }
-        
-    });
-    
-    //grunt.loadTasks('tasks');
+		bump: {
+			options: {
+				files: ['package.json'],
+				commit: false,
+				createTag: false,
+				push: false
+			}
+		}
 
-    grunt.loadNpmTasks('grunt-regex-replace');
-    grunt.loadNpmTasks('grunt-bump');
-    grunt.loadNpmTasks('grunt-sass');
-    
-    grunt.registerTask('version', ['bump', 'regex-replace']);
-    grunt.registerTask('styles', ['sass']);
-    grunt.registerTask('default', ['styles']);
-    
-    
+	});
+
+	grunt.loadNpmTasks('grunt-regex-replace');
+	grunt.loadNpmTasks('grunt-bump');
+	grunt.loadNpmTasks('grunt-sass');
+
+	grunt.registerTask('version', ['bump', 'regex-replace']);
+	grunt.registerTask('styles', ['sass']);
+	grunt.registerTask('default', ['styles']);
 
 };
