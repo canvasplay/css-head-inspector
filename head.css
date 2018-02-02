@@ -85,7 +85,7 @@ body:after {
 }
 
 html:before {
-  content: "<html ! css-head-inspector@0.2.15 >";
+  content: "<html ! css-head-inspector@v0.2.15 >";
 }
 
 html:after {

@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
 		'regex-replace': {
 			'foo': {
-				src: ['index.html', 'head.scss'],
+				src: ['index.html', 'head.scss', 'head.css'],
 				actions: [{
 					name: 'version',
 					search: /v(\d+\.\d+\.\d+)/gm,
