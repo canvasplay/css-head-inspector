@@ -27,6 +27,9 @@ $size: 3.2em;
     text-overflow: ellipsis;
 }
 
+//force visible overflows
+html, body{ overflow: initial }
+
 html{
   border: 10px solid $color-base;
   padding: 10px;
