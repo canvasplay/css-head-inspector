@@ -1,4 +1,4 @@
-$version: '0.2.14';
+$version: '0.2.15';
 $font: 14px/1.5 Consolas,monaco,monospace;
 $color-base: #673AB7;
 $color-meta: #9C27B0;
@@ -52,6 +52,12 @@ script{
   z-index: 99999999;
   @include base();
   @include singleline();
+  
+  //extra bonus :D
+  //make whole content visible while mouse down using :active
+  &:active{
+    white-space: normal;
+  }
   
 }
 
