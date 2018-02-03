@@ -1,6 +1,6 @@
 {
   "name": "head-css-inspector",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Plugin CSS styles for visually inspect hidden head elements",
   "author": "canvasplay",
   "license": "MIT",

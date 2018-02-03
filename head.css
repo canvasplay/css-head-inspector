@@ -92,7 +92,7 @@ body:after {
 }
 
 html:before {
-  content: "<html ! css-head-inspectorv0.3.1>";
+  content: "<html ! css-head-inspectorv0.3.2>";
 }
 
 html:after {
@@ -146,6 +146,10 @@ meta[property][content]::after {
 title {
   font-size: 26px;
   font-weight: bold;
+}
+
+title:empty:before {
+  content: 'Untitled';
 }
 
 link {
