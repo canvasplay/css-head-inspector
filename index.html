@@ -10,8 +10,12 @@
     <!-- INLINE BASE64 DEFAULT FAVICON ( prevents annoying http requests for none existing favicon.ico ) -->
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:800|Open+Sans:400,400i,700,700i" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:400,700|Open+Sans:400,400i,700,700i" />
+    
 
     <style>
 
@@ -19,86 +23,128 @@
 
       html, body{
         font-family: Open Sans, Arial, Helvetica, sans-serif;
+        background: #2d2832;
+        color: #CCC;
       }
-
+      
+      body{
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='304' height='304' viewBox='0 0 304 304' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2a5 5 0 1 0-2 0V82h64v-2h-62V21.9zm16 16a5 5 0 1 0-2 0V66h48v-2h-46V37.9zm-128 96a5 5 0 1 0-2 0V210h16v10.1a5 5 0 1 0 2 0V208h-16v-74.1zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9a5 5 0 1 0-2 0V144H53.9a5 5 0 1 0 0 2H98v-44.1zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9a5 5 0 1 0-2 0V64H80v64H69.9a5 5 0 1 0 0 2H82V66h32V37.9zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9a5 5 0 1 0-2 0V162h16v30h-16v66h48v46h2v-48h-48v-62h16v-34h-16v-10.1zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.172l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.513L175.586 80H224V21.9a5 5 0 1 1 2 0V82h-49.586L146 112.414V188.1zm16 32a5 5 0 1 1-2 0v-99.513L184.586 96H300.1a5.004 5.004 0 0 1 3.9-3.9v2.07a3.004 3.004 0 0 0 0 5.66v2.07a5.004 5.004 0 0 1-3.9-3.9H185.414L162 121.414V220.1zm-144-64a5 5 0 1 1-2 0v-3.513l48-48V48h32V0h2v50H66v55.413l-48 48v2.687zM50 53.9a5 5 0 1 0-2 0v42.686l-48 48V210h28.1a5 5 0 1 0 0-2H2v-62.586l48-48V53.9zm-16 16a5 5 0 1 0-2 0v18.686l-32 32v2.828l34-34V69.9zM12.1 32a5 5 0 1 1 0 2H9.414L0 43.414v-2.828L8.586 32H12.1zm265.8 18a5 5 0 1 1 0-2h18.686L304 40.586v2.828L297.414 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.413l16-16v2.827l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.586L40.586 194H21.9a5 5 0 1 1 0-2h19.513L66 216.586V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.598L56.598 162H37.9a5 5 0 1 1 0-2h19.502L98 200.598V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.586L48.586 178H21.9a5 5 0 1 1 0-2h27.513L82 208.586V258H53.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM34 39.793V0h-2v40.586L8.586 64H0v2h9.413L34 41.414v-1.62zM2 300.1V258h14v46h2v-48H0v46.17A3.004 3.004 0 0 1 3.83 304H5.9a5.004 5.004 0 0 0-3.9-3.9zM34 241v63h-2v-62H0v-2h34v1zM17 18h1V0h-2v16H0v2h17zm273-2V0h-2v18h16v-2h-14zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.002 5.002 0 0 1 6 97a5.002 5.002 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32a5 5 0 0 0-9.8 0h2.07a3.004 3.004 0 0 1 5.66 0h2.07zM5.9 0A5.002 5.002 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0a5 5 0 0 0 3.9 5.9V3.83A3.004 3.004 0 0 1 302.17 0h-2.07zm3.9 300.1a5.004 5.004 0 0 0-3.9 3.9h2.07a3.016 3.016 0 0 1 1.83-1.83v-2.07z' fill='%2345404b' fill-opacity='.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+      }
+      
+      a {
+        background: #4c4c5a;
+        color: #cccccc;
+        padding: 0 0.35em;
+        border-radius: 0.15em;
+      }
+      
+      a:hover{
+        background: #007bff;
+        color: #FFF;
+        text-decoration: none;
+      }
+      
+      h1, h2, h3, h4{
+        color: #FFF;
+      }
+      
       h1{
-        font-family: Dosis, Arial, Helvetica, sans-serif;
+        font-family: Roboto, Open Sans, Arial, Helvetica, sans-serif;
         font-size: 3.6em;
         font-weight: 800;
         line-height: 1.1;
         margin: 0 0 .3em;
       }
-
+      
       h2{
         font-size: 2em;
         line-height: 1.2;
       }
-
+      
       h3 {
-          font-size: 1.4em;
-          font-weight: bold;
+        font-size: 1.7em;
+        font-weight: bold;
+        margin: 1.8em 0 .8em;
       }
-
+      
+      h3 span{
+        display: block;
+        font-size: 0.65em;
+        color: #2196F3;
+        text-transform: uppercase;
+        font-family: Roboto;
+        padding: 0 0 .15em;
+        font-weight: normal;
+      }
+      
       header,
       article{
-        /*text-align: center;*/
-        padding: 3em
+        padding: 3em;
+        max-width: 640px;
+        margin: 0 auto;
       }
-
+      
       header{
         max-width: 40em;
         padding-bottom: 0;
       }
-
+      
       article{
         padding-top: 0;
       }
-
-      p{
-        margin: 1em 0;
-        line-height: 1.3;
-      }
-
-      .license{
-        font-size: .9em;
-        color: #607D8B;
-      }
-
-      .button{
-        text-decoration: none;
-        background: #4CAF50;
-        border-radius: 0.2em;
-        color: white;
-        padding: 0.5em 1em;
-        display: inline-block;
-        box-shadow: 0 .25em 0 #327134;
-        margin: .25em 0 0 0;
-      }
-
-      .button:active{
-        box-shadow: 0 0 0 transparent;
-        margin: .5em 0 -.25em 0;
-      }
-
-      .buttons{
-        margin: 2em 0;
-      }
-
+      
       code{
         font-family: Consolas,monaco,monospace;
         font-size: .9em;
         margin: 0 .25em;
         color: #607D8B;
       }
-
-
-    
+      
+      ul{
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        column-count: 4;
+      }
+      
+      ul li{
+        display: inline-block;
+        padding: .5em;
+      }
+      
+      p{
+        margin: 1em 0;
+        line-height: 1.4;
+      }
+      
+      p.bookmarklet{
+        text-align: center;
+        margin: 2em 0 2.5em;
+      }
+      
+      p.bookmarklet a{
+        font-size: 1.2em;
+        padding: .3em 1.2em;
+      }
+      
+      .btn-fixed{
+        position: fixed;
+        top: 2em;
+        right: 2em;
+        padding: .5em .7em;
+      }
+      
+      .btn-fixed i:before{ content: '\E8F4';}
+      .btn-fixed.enabled i:before{ content: '\E8F5';}
 
     </style>
 
     <script type="text/javascript" src=""></script>
       
-    <script type="text/javascript">/* this is an inline script */</script>
+    <script type="text/javascript">/* this is an inline script, you can click and hold to reaveal its full contents. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. */</script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -110,52 +156,69 @@
   </head>
 
   <body>
+    
     <header>
       <h1>CSS HEAD INSPECTOR</h1>
       <h2>Pluggable CSS styles to visually inspect hidden html head elements.</h2>
       <p class="license">MIT LICENSE v0.3.2</p>
     </header>
-
+    
+    <a class="btn-fixed" href="javascript:(function(){var s=document.querySelector('link[name=css-head-inspector]'); if(s) document.body.removeChild(s); if(s) return; s=document.createElement('link'); s.setAttribute('name','css-head-inspector'); s.setAttribute('rel','stylesheet'); s.setAttribute('href','https://canvasplay.github.io/css-head-inspector/head.css'); document.body.appendChild(s); })();" onclick="document.querySelector('.btn-fixed').classList.toggle('enabled')" title="Toggle Inspector Styles">
+      <i class="material-icons"></i>
+    </a>
+    
     <article>
+
+      <h3><span>What is this?</span> Injctable CSS styles reavealing html's head contents</h3>
+      <p>
+        This is an small set of css rules revealing typically hidden elements mostly inside html's head. The plugin targets any of the following html elements inside the current website:
+      </p>
+      <ul>
+        <li><code>&lt;html&gt;</code></li>
+        <li><code>&lt;head&gt;</code></li>
+        <li><code>&lt;body&gt;</code></li>
+        <li><code>&lt;title&gt;</code></li>
+        <li><code>&lt;meta&gt;</code></li>
+        <li><code>&lt;link&gt;</code></li>
+        <li><code>&lt;script&gt;</code></li>
+        <li><code>&lt;style&gt;</code></li>
+      </ul>
+      <p>
+        Once injected, these elements will be visible and will also show relevant information about theme such as a link's href or an script's source file. Revealed elements are bright colored and super high z-indexed in order to stand out in most of website designs.
+      </p>
       
-      <p class="buttons">
-        <a class="button" href="javascript:(function(){var s=document.querySelector('link[name=css-head-inspector]'); if(s) document.body.removeChild(s); if(s) return; s=document.createElement('link'); s.setAttribute('name','css-head-inspector'); s.setAttribute('rel','stylesheet'); s.setAttribute('href','https://canvasplay.github.io/css-head-inspector/head.css'); document.body.appendChild(s);
+      <h3><span>Usage</span> How to use it?</h3>
+      <p>This is meant to be used as an injectable CSS plugin. So you can easily plug and unplug the styles from any website you are currently navigating. There are two ways of use it.</p>
+      <h4>Bookmarklet</h4>
+      <p>By using the bookmarlet it will create and inject a new <code>&lt;link&gt;</code> in the current page linking to the latest styles version. By clicking the bookmarlet twice it will remove any previously injected styles, this way you can use the bookmarlet as an inspect toogle button.</p>
+      <p>To "install" the bookmarlet you can drag and drop the link below in you browser's bookmarks toolbar:</p>
+      <p class="bookmarklet">
+        <a href="javascript:(function(){var s=document.querySelector('link[name=css-head-inspector]'); if(s) document.body.removeChild(s); if(s) return; s=document.createElement('link'); s.setAttribute('name','css-head-inspector'); s.setAttribute('rel','stylesheet'); s.setAttribute('href','https://canvasplay.github.io/css-head-inspector/head.css'); document.body.appendChild(s);
            })();" title="CSS HEAD INSPECTOR">CSS HEAD INSPECTOR</a>
       </p>
       
-      <p>
-        Click the button above to toggle the inspector styles.
-      </p>
+      <h4>The Google Chrome&trade; extension</h4>
+      <p>There is also a Google Chrome&trade; extension, it does exactly the same as the bookmarlet but in a more elegant and integrated way. Unfortunately the extension is not published in the chrome store, so if you want to use it you have to follow these steps:</p>
+      <ol>
+        <li><a href="https://github.com/canvasplay/css-head-inspector/zipball/master">Download</a> or <a href="https://github.com/canvasplay/css-head-inspector">clone</a> the repository from github.</li>
+        <li>Navigate with your chrome browser to <code>chrome://extensions/</code></li>
+        <li>Activate the <code>developer mode</code></li>
+        <li>Press the <code>Load unpacked extension</code> button</li>
+        <li>Select the <code>chrome-extension</code> folder inside the downloaded package</li>
+      </ol>
+      <p>And violá! You got now an easy to use button next to your browser url bar. Click for toogling the inspector styles on any website you visit. You will find interesting and unexpected stuff if you try it on your daily and favorite websites ;).</p>
       
-      <h3>What is this?</h3>
-      <p>
-        This is an small set of css rules revealing hidden html elements mostly inside head. Applying this styles to any existing website you can show most of html's head contents such as <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> or <code>&lt;style&gt;</code>
-      </p>
-      <p>
-        Revealed elements are bright colored in order to stand out in most of website designs.
-      </p>
+      <h3><span>Motivation</span> Why did you created this?</h3>
+      <p>This is just a tiny toy project, it started as an experiment in codepen exploring unexpected uses of CSS. I later decided to create the github repo  and share it with the world as an open source.</p>
+      <p>But... we already have dev tools... so... wtf!? This does not pretend to be as as useful as a full featured dev tools suite, this is just a toy and you can have fun using it (maybe not...), this is what it is and you can use it as you like.</p>
       
-      <h3>Bookmarklet</h3>
-      
-      <p>
-        You can easily use the inspector on every site using a bookmarklet link.
-      </p>
-      
-      <p>
-        The bookmarlet comes in two flavors, one injects the stylesheet using a <code>&lt;link&gt;</code> and the other using <code>&lt;style&gt;</code> inlining all the css code, the <code>&lt;style&gt;</code> version is useful to prevent CSP crossdomain errors.
-      </p>
-      
-      <h3>Motivation</h3>
-      
-      <p>
-        This project is just a tiny toy, it started as an experiment in codepen. I decided to create this bookmarlet so maybe someone might find it useful for some quick checks about what is on the head of a website.
-        But... we already have dev tools... Yep! It does not pretend to be as useful as a full featured dev tools, it is what it is and you can use it as you like :)
-      </p>
+      <h3><span>Open source</span> Get involved!</h3>
+      <p>I would love to hear what you think about it. It's a work in progress and I would welcome any suggestions or code contributions, did you found a bug or have a fun improvement? You can fork the project on <a href="https://github.com/canvasplay/css-head-inspector">Github</a>. Please note this is just css toy so do not take it too serious ;)</p>
       
       <h3>Downloads</h3>
-      <a href="https://github.com/canvasplay/css-head-inspector/zipball/master">ZIP</a>
-      <a href="https://github.com/canvasplay/css-head-inspector/tarball/master">TAR</a>
-      <a href="https://github.com/canvasplay/css-head-inspector" target="_blank">GITHUB</a>
+      <a href="https://github.com/canvasplay/css-head-inspector/zipball/master">.zip</a>
+      <a href="https://github.com/canvasplay/css-head-inspector/tarball/master">.tar</a>
+      <a href="https://github.com/canvasplay/css-head-inspector" target="_blank">Github</a>
 
     </article>
 
