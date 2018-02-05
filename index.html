@@ -118,13 +118,13 @@
   
       @media (max-width: 580px) {
         ul{ column-count: 3 }
-      }  
+      }
 
       @media (max-width: 414px) {
         h1{ font-size: 3em }
         h2{ font-size: 2em }
         ul{ column-count: 2 }
-      } 
+      }
 
       p{
         margin: 1em 0;
@@ -141,8 +141,11 @@
         padding: .3em 1.2em;
       }
 
-      p.bookmarklet a i{
-        vertical-align: text-bottom;
+      p.bookmarklet a:before{
+        font-family: 'Material Icons';
+        content:'bookmark_border';
+        vertical-align: middle;
+        font-size: 24px;
       }
       
       .btn-fixed{
@@ -210,7 +213,6 @@
       <p class="bookmarklet">
         <a href="javascript:(function(){var s=document.querySelector('link[name=css-head-inspector]'); if(s) document.body.removeChild(s); if(s) return; s=document.createElement('link'); s.setAttribute('name','css-head-inspector'); s.setAttribute('rel','stylesheet'); s.setAttribute('href','https://canvasplay.github.io/css-head-inspector/head.css'); document.body.appendChild(s);
            })();" title="CSS HEAD INSPECTOR">
-            <i class="material-icons">bookmark_border</i> 
             CSS HEAD INSPECTOR
           </a>
       </p>
