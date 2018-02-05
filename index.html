@@ -76,10 +76,12 @@
         padding: 0 0 .15em;
         font-weight: normal;
       }
-      
+      h4 {
+        margin-top: 1.5em;
+      }
       header,
       article{
-        padding: 3em;
+        padding: 2em;
         max-width: 720px;
         margin: 0 auto;
       }
@@ -110,10 +112,20 @@
       }
       
       ul li{
-        display: inline-block;
+        display: block;
         padding: .5em;
       }
-      
+  
+      @media (max-width: 580px) {
+        ul{ column-count: 3 }
+      }  
+
+      @media (max-width: 414px) {
+        h1{ font-size: 3em }
+        h2{ font-size: 2em }
+        ul{ column-count: 2 }
+      } 
+
       p{
         margin: 1em 0;
         line-height: 1.4;
@@ -170,7 +182,7 @@
 
       <h3><span>What is this?</span> Injctable CSS styles reavealing html's head contents</h3>
       <p>
-        This is an small set of css rules revealing typically hidden elements mostly inside html's head. The plugin targets any of the following html elements inside the current website:
+        This is an small set of css rules revealing typically hidden elements mostly inside html's head. This is where the plugin's name comes from. The css rules targets any of the following html elements:
       </p>
       <ul>
         <li><code>&lt;html&gt;</code></li>
@@ -187,7 +199,7 @@
       </p>
       
       <h3><span>Usage</span> How to use it?</h3>
-      <p>This is meant to be used as an injectable CSS plugin. So you can easily plug and unplug the styles from any website you are currently navigating. There are two ways of use it.</p>
+      <p>This is meant to be used as an injectable CSS plugin. In order to provide an easy way of plug and unplug the styles on any website you can use one of the following approaches:</p>
       <h4>Bookmarklet</h4>
       <p>By using the bookmarlet it will create and inject a new <code>&lt;link&gt;</code> in the current page linking to the latest styles version. By clicking the bookmarlet twice it will remove any previously injected styles, this way you can use the bookmarlet as an inspect toogle button.</p>
       <p>To "install" the bookmarlet you can drag and drop the link below in you browser's bookmarks toolbar:</p>
@@ -205,11 +217,11 @@
         <li>Press the <code>Load unpacked extension</code> button</li>
         <li>Select the <code>chrome-extension</code> folder inside the downloaded package</li>
       </ol>
-      <p>And violá! You got now an easy to use button next to your browser url bar. Click for toogling the inspector styles on any website you visit. You will find interesting and unexpected stuff if you try it on your daily and favorite websites ;).</p>
+      <p>And violá! You got now an easy to use button next to your browser url bar. Click for toogling the inspector styles on any website you visit.</p>
       
       <h3><span>Motivation</span> Why did you created this?</h3>
-      <p>This is just a tiny toy project, it started as an experiment in codepen exploring unexpected uses of CSS. I later decided to create the github repo  and share it with the world as an open source.</p>
-      <p>But... we already have dev tools... so... wtf!? This does not pretend to be as as useful as a full featured dev tools suite, this is just a toy and you can have fun using it (maybe not...), this is what it is and you can use it as you like.</p>
+      <p>This is just a tiny toy project, it started as an experiment in codepen while I was exploring unexpected uses of CSS. I later decided to create the github repository and share it with the world as an open source.</p>
+      <p>But... we already have dev tools... so... wtf!? This does not pretend to be as as useful as a full featured developer tools suite, this is just a toy and you can have fun using it (maybe not...), this is what it is and you can use it as you like.</p>
       
       <h3><span>Open source</span> Get involved!</h3>
       <p>I would love to hear what you think about it. It's a work in progress and I would welcome any suggestions or code contributions, did you found a bug or have a fun improvement? You can fork the project on <a href="https://github.com/canvasplay/css-head-inspector">Github</a>. Please note this is just css toy so do not take it too serious ;)</p>
