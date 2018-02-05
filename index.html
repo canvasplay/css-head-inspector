@@ -140,6 +140,10 @@
         font-size: 1.2em;
         padding: .3em 1.2em;
       }
+
+      p.bookmarklet a i{
+        vertical-align: text-bottom;
+      }
       
       .btn-fixed{
         position: fixed;
@@ -205,7 +209,10 @@
       <p>To "install" the bookmarlet you can drag and drop the link below in you browser's bookmarks toolbar:</p>
       <p class="bookmarklet">
         <a href="javascript:(function(){var s=document.querySelector('link[name=css-head-inspector]'); if(s) document.body.removeChild(s); if(s) return; s=document.createElement('link'); s.setAttribute('name','css-head-inspector'); s.setAttribute('rel','stylesheet'); s.setAttribute('href','https://canvasplay.github.io/css-head-inspector/head.css'); document.body.appendChild(s);
-           })();" title="CSS HEAD INSPECTOR">CSS HEAD INSPECTOR</a>
+           })();" title="CSS HEAD INSPECTOR">
+            <i class="material-icons">bookmark_border</i> 
+            CSS HEAD INSPECTOR
+          </a>
       </p>
       
       <h4>The Google Chrome&trade; extension</h4>
