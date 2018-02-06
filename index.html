@@ -98,7 +98,12 @@
         font-family: Consolas,monaco,monospace;
         font-size: .9em;
         margin: 0 .25em;
-        color: #607D8B;
+        border: 1px solid rgba(255,255,255,.15);
+        padding: 0 0.4em;
+        display: inline-block;
+        border-radius: 0.2em;
+        color: inherit;
+        background: #2d2832;
       }
       
       ul{
@@ -113,7 +118,11 @@
       
       ul li{
         display: block;
-        padding: .5em;
+      }
+      
+      ul li,
+      ol li{
+        padding: 0.5em 0;
       }
   
       @media (max-width: 580px) {
