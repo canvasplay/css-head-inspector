@@ -186,7 +186,7 @@
     
     <header>
       <h1>CSS HEAD INSPECTOR</h1>
-      <h2>Pluggable CSS styles to visually inspect hidden html's head elements.</h2>
+      <h2>Injectable set of CSS rules to visually inspect hidden HTML's head elements.</h2>
       <p class="license">MIT LICENSE v0.3.2</p>
     </header>
     
@@ -196,9 +196,9 @@
     
     <article>
 
-      <h3><span>What is this?</span> Injctable CSS styles reavealing html's head contents</h3>
+      <h3><span>What is this?</span> An small set of CSS rules targeting typically hidden html elements</h3>
       <p>
-        This is an small set of css rules revealing typically hidden elements mostly inside html's head. This is where the plugin's name comes from. The css rules targets any of the following html elements:
+        This is a toy project exploring the power of unexpected uses of CSS. It reveals and allows you to visually inspect typically hidden html elements. The inspector styles targets any of the following HTML elements:
       </p>
       <ul>
         <li><code>&lt;html&gt;</code></li>
@@ -211,17 +211,16 @@
         <li><code>&lt;style&gt;</code></li>
       </ul>
       <p>
-        Once injected, these elements will be visible and will also show relevant information about theme such as a link's href or an script's source file. Revealed elements are bright colored and super high z-indexed in order to stand out in most of website designs.
+        Once injected, the inspector styles make these elements visible and also display useful information about its attributes, such as links' href or scripts' source file. Revealed elements are bright colored and super high z-indexed in order to stand out in most of website designs.
       </p>
       
       <h3><span>Usage</span> How to use it?</h3>
-      <p>This is meant to be used as an injectable CSS plugin. In order to provide an easy way of plug and unplug the styles on any website you can use one of the following approaches:</p>
+      <p>This is not meant to be used as part of any website project. This is meant to be used as an injectable CSS plugin from client side. In order to provide an easy way of plug and unplug the styles on any website you can use one of the following approaches:</p>
       <h4>Bookmarklet</h4>
       <p>By using the bookmarlet it will create and inject a new <code>&lt;link&gt;</code> in the current page linking to the latest styles version. By clicking the bookmarlet twice it will remove any previously injected styles, this way you can use the bookmarlet as an inspect toogle button.</p>
-      <p>To "install" the bookmarlet you can drag and drop the link below in you browser's bookmarks toolbar:</p>
+      <p>To "install" the bookmarlet you can drag and drop the button below to your browser's bookmarks toolbar.</p>
       <p class="bookmarklet">
-        <a href="javascript:(function(){var s=document.querySelector('link[name=css-head-inspector]'); if(s) document.body.removeChild(s); if(s) return; s=document.createElement('link'); s.setAttribute('name','css-head-inspector'); s.setAttribute('rel','stylesheet'); s.setAttribute('href','https://canvasplay.github.io/css-head-inspector/head.css'); document.body.appendChild(s);
-           })();" title="CSS HEAD INSPECTOR">
+        <a href="javascript:(function(){var s=document.querySelector('link[name=css-head-inspector]');if(s)document.body.removeChild(s);if(s)return;s=document.createElement('link');s.setAttribute('name','css-head-inspector');s.setAttribute('rel','stylesheet');s.setAttribute('href','https://canvasplay.github.io/css-head-inspector/head.css');document.body.appendChild(s);})();" title="CSS HEAD INSPECTOR">
             CSS HEAD INSPECTOR
           </a>
       </p>
@@ -235,7 +234,7 @@
         <li>Press the <code>Load unpacked extension</code> button</li>
         <li>Select the <code>chrome-extension</code> folder inside the downloaded package</li>
       </ol>
-      <p>And violá! You got now an easy to use button next to your browser url bar. Click for toogling the inspector styles on any website you visit.</p>
+      <p>And violá! You got now an easy to use button next to your browser's address bar. Click for toogling the inspector styles on any website you visit.</p>
       
       <h3><span>Motivation</span> Why did you created this?</h3>
       <p>This is just a tiny toy project, it started as an experiment in codepen while I was exploring unexpected uses of CSS. I later decided to create the github repository and share it with the world as an open source.</p>
